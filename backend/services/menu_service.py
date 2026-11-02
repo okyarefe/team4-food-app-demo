@@ -26,3 +26,12 @@ def get_menu_item(menu_item_id: int) -> MenuItem | None:
 
 def list_menu_items() -> list[MenuItem]:
     return list(_DB.values())
+
+
+def update_menu_item(menu_item_id: int, **changes) -> MenuItem | None:
+    menu_item = _DB.get(menu_item_id)
+    if menu_item is None:
+        return None
+    for key, value in changes.items():
+        setattr(menu_item, key, value)
+    return menu_item
