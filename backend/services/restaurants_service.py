@@ -22,3 +22,7 @@ def create_restaurant(name: str, address: str, opens_at: str, closes_at: str) ->
 
 def get_restaurant(restaurant_id: int) -> Restaurant | None:
     return _DB.get(restaurant_id)
+
+
+def list_restaurants() -> list[Restaurant]:
+    return list(_DB.values())
