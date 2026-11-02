@@ -18,3 +18,7 @@ def create_menu_item(name: str, price: float, category: str, available: bool) ->
     _DB[_next_id] = menu_item
     _next_id += 1
     return menu_item
+
+
+def get_menu_item(menu_item_id: int) -> MenuItem | None:
+    return _DB.get(menu_item_id)
