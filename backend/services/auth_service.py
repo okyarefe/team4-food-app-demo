@@ -29,3 +29,7 @@ def get_user(user_id: int) -> User | None:
 
 
 # TODO: check with team
+
+
+def list_users() -> list[User]:
+    return list(_DB.values())
