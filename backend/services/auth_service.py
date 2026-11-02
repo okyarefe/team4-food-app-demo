@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_user(email: str, password_hash: str, name: str) -> User:
+    if not password_hash.strip():
+        raise ValueError("password_hash is required")
     logger.info("create_user called")
     global _next_id
     user = User(id=_next_id, email=email, password_hash=password_hash, name=name)
