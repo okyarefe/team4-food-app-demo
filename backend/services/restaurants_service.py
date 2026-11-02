@@ -18,3 +18,7 @@ def create_restaurant(name: str, address: str, opens_at: str, closes_at: str) ->
     _DB[_next_id] = restaurant
     _next_id += 1
     return restaurant
+
+
+def get_restaurant(restaurant_id: int) -> Restaurant | None:
+    return _DB.get(restaurant_id)
