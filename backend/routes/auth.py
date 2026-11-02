@@ -19,3 +19,11 @@ def _to_json(value):
 def create_user_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.create_user(**data))), 201
+
+
+@bp.get("/<int:item_id>")
+def get_user_route(item_id: int):
+    result = service.get_user(item_id)
+    if result is None:
+        return jsonify({"error": "not found"}), 404
+    return jsonify(_to_json(result))
