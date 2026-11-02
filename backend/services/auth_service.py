@@ -23,3 +23,6 @@ def create_user(email: str, password_hash: str, name: str) -> User:
 
 def get_user(user_id: int) -> User | None:
     return _DB.get(user_id)
+
+
+# TODO: add pagination
