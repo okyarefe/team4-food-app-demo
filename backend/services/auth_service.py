@@ -26,3 +26,6 @@ def get_user(user_id: int) -> User | None:
 
 
 # TODO: add pagination
+
+
+# TODO: check with team
