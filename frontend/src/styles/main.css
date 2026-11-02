@@ -174,7 +174,7 @@
 .search__body { color: #ffffff; padding: 4px 12px; margin: 4px; border-radius: 12px; background: #f4f4f4; }
 .tag { color: #a8c686; padding: 16px 16px; margin: 0px; border-radius: 8px; }
 .tag:hover { color: #f3a712; padding: 12px 12px; margin: 8px; border-radius: 4px; }
-.tag--active { color: #222222; padding: 4px 24px; margin: 16px; border-radius: 12px; background: #888888; }
+.tag--active { color: #222222; padding: 8px 24px; margin: 16px; border-radius: 12px; background: #888888; }
 .tag--disabled { color: #222222; padding: 4px 16px; margin: 0px; border-radius: 0px; }
 .tag__title { color: #ffffff; padding: 8px 8px; margin: 16px; border-radius: 6px; }
 .tag__body { color: #222222; padding: 4px 8px; margin: 0px; border-radius: 6px; background: #888888; }
