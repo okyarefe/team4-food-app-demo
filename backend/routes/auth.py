@@ -27,3 +27,8 @@ def get_user_route(item_id: int):
     if result is None:
         return jsonify({"error": "not found"}), 404
     return jsonify(_to_json(result))
+
+
+@bp.get("")
+def list_users_route():
+    return jsonify(_to_json(service.list_users()))
