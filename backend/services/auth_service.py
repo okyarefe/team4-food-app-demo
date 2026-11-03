@@ -37,3 +37,12 @@ def get_user(user_id: int) -> User | None:
 
 def list_users() -> list[User]:
     return list(_DB.values())
+
+
+def update_user(user_id: int, **changes) -> User | None:
+    user = _DB.get(user_id)
+    if user is None:
+        return None
+    for key, value in changes.items():
+        setattr(user, key, value)
+    return user
