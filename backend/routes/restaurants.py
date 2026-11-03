@@ -47,3 +47,9 @@ def delete_restaurant_route(item_id: int):
     if not service.delete_restaurant(item_id):
         return jsonify({"error": "not found"}), 404
     return "", 204
+
+
+@bp.post("/is-open")
+def is_open_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.is_open(**data)))
