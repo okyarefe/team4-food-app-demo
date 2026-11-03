@@ -45,3 +45,8 @@ def is_open(restaurant: Restaurant, now: datetime | None = None) -> bool:
     now = now or datetime.now()
     current = now.strftime("%H:%M")
     return restaurant.opens_at <= current < restaurant.closes_at
+
+
+def search_restaurants(query: str) -> list[Restaurant]:
+    query = query.lower()
+    return [r for r in _DB.values() if query in r.name.lower() or query in r.address.lower()]
