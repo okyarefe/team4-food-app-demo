@@ -39,3 +39,7 @@ def update_menu_item(menu_item_id: int, **changes) -> MenuItem | None:
 
 def delete_menu_item(menu_item_id: int) -> bool:
     return _DB.pop(menu_item_id, None) is not None
+
+
+def list_available() -> list[MenuItem]:
+    return [item for item in _DB.values() if item.available]
