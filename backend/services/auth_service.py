@@ -47,3 +47,7 @@ def update_user(user_id: int, **changes) -> User | None:
     for key, value in changes.items():
         setattr(user, key, value)
     return user
+
+
+def delete_user(user_id: int) -> bool:
+    return _DB.pop(user_id, None) is not None
