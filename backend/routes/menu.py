@@ -47,3 +47,9 @@ def delete_menu_item_route(item_id: int):
     if not service.delete_menu_item(item_id):
         return jsonify({"error": "not found"}), 404
     return "", 204
+
+
+@bp.post("/list-available")
+def list_available_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.list_available(**data)))
