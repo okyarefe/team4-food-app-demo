@@ -32,3 +32,11 @@ def get_user_route(item_id: int):
 @bp.get("")
 def list_users_route():
     return jsonify(_to_json(service.list_users()))
+
+
+@bp.patch("/<int:item_id>")
+def update_user_route(item_id: int):
+    result = service.update_user(item_id, **(request.get_json() or {}))
+    if result is None:
+        return jsonify({"error": "not found"}), 404
+    return jsonify(_to_json(result))
