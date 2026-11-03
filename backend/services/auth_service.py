@@ -36,6 +36,7 @@ def get_user(user_id: int) -> User | None:
 
 
 def list_users() -> list[User]:
+    logger.info("list_users called")
     return list(_DB.values())
 
 
