@@ -26,3 +26,12 @@ def get_restaurant(restaurant_id: int) -> Restaurant | None:
 
 def list_restaurants() -> list[Restaurant]:
     return list(_DB.values())
+
+
+def update_restaurant(restaurant_id: int, **changes) -> Restaurant | None:
+    restaurant = _DB.get(restaurant_id)
+    if restaurant is None:
+        return None
+    for key, value in changes.items():
+        setattr(restaurant, key, value)
+    return restaurant
