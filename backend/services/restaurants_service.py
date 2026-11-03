@@ -35,3 +35,7 @@ def update_restaurant(restaurant_id: int, **changes) -> Restaurant | None:
     for key, value in changes.items():
         setattr(restaurant, key, value)
     return restaurant
+
+
+def delete_restaurant(restaurant_id: int) -> bool:
+    return _DB.pop(restaurant_id, None) is not None
