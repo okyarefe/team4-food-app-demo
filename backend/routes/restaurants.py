@@ -53,3 +53,9 @@ def delete_restaurant_route(item_id: int):
 def is_open_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.is_open(**data)))
+
+
+@bp.post("/search-restaurants")
+def search_restaurants_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.search_restaurants(**data)))
