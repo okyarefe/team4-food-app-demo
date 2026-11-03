@@ -35,3 +35,7 @@ def update_menu_item(menu_item_id: int, **changes) -> MenuItem | None:
     for key, value in changes.items():
         setattr(menu_item, key, value)
     return menu_item
+
+
+def delete_menu_item(menu_item_id: int) -> bool:
+    return _DB.pop(menu_item_id, None) is not None
