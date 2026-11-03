@@ -32,3 +32,11 @@ def get_restaurant_route(item_id: int):
 @bp.get("")
 def list_restaurants_route():
     return jsonify(_to_json(service.list_restaurants()))
+
+
+@bp.patch("/<int:item_id>")
+def update_restaurant_route(item_id: int):
+    result = service.update_restaurant(item_id, **(request.get_json() or {}))
+    if result is None:
+        return jsonify({"error": "not found"}), 404
+    return jsonify(_to_json(result))
