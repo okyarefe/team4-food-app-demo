@@ -39,3 +39,9 @@ def update_restaurant(restaurant_id: int, **changes) -> Restaurant | None:
 
 def delete_restaurant(restaurant_id: int) -> bool:
     return _DB.pop(restaurant_id, None) is not None
+
+
+def is_open(restaurant: Restaurant, now: datetime | None = None) -> bool:
+    now = now or datetime.now()
+    current = now.strftime("%H:%M")
+    return restaurant.opens_at <= current < restaurant.closes_at
