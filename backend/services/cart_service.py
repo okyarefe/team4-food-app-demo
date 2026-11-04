@@ -26,3 +26,12 @@ def get_cart_item(cart_item_id: int) -> CartItem | None:
 
 def list_cart_items() -> list[CartItem]:
     return list(_DB.values())
+
+
+def update_cart_item(cart_item_id: int, **changes) -> CartItem | None:
+    cart_item = _DB.get(cart_item_id)
+    if cart_item is None:
+        return None
+    for key, value in changes.items():
+        setattr(cart_item, key, value)
+    return cart_item
