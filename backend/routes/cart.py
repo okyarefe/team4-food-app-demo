@@ -32,3 +32,11 @@ def get_cart_item_route(item_id: int):
 @bp.get("")
 def list_cart_items_route():
     return jsonify(_to_json(service.list_cart_items()))
+
+
+@bp.patch("/<int:item_id>")
+def update_cart_item_route(item_id: int):
+    result = service.update_cart_item(item_id, **(request.get_json() or {}))
+    if result is None:
+        return jsonify({"error": "not found"}), 404
+    return jsonify(_to_json(result))
