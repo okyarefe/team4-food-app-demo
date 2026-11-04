@@ -43,3 +43,8 @@ def delete_menu_item(menu_item_id: int) -> bool:
 
 def list_available() -> list[MenuItem]:
     return [item for item in _DB.values() if item.available]
+
+
+def search_menu(query: str) -> list[MenuItem]:
+    query = query.lower()
+    return [item for item in _DB.values() if query in item.name.lower()]
