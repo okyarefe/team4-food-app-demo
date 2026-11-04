@@ -13,3 +13,9 @@ def test_create_menu_item():
 def test_get_menu_item():
     created = service.create_menu_item("test", 9.5, "test", True)
     assert service.get_menu_item(created.id) == created
+
+
+def test_delete_menu_item():
+    created = service.create_menu_item("test", 9.5, "test", True)
+    assert service.delete_menu_item(created.id) is True
+    assert service.get_menu_item(created.id) is None
