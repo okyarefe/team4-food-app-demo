@@ -59,3 +59,9 @@ def list_available_route():
 def search_menu_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.search_menu(**data)))
+
+
+@bp.post("/items-by-category")
+def items_by_category_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.items_by_category(**data)))
