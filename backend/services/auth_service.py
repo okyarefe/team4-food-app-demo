@@ -52,3 +52,9 @@ def update_user(user_id: int, **changes) -> User | None:
 
 def delete_user(user_id: int) -> bool:
     return _DB.pop(user_id, None) is not None
+
+
+def hash_password(password: str) -> str:
+    salt = os.urandom(16)
+    digest = hashlib.pbkdf2_hmac("sha256", password.encode(), salt, 100_000)
+    return salt.hex() + ":" + digest.hex()
