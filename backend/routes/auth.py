@@ -47,3 +47,9 @@ def delete_user_route(item_id: int):
     if not service.delete_user(item_id):
         return jsonify({"error": "not found"}), 404
     return "", 204
+
+
+@bp.post("/hash-password")
+def hash_password_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.hash_password(**data)))
