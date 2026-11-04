@@ -48,3 +48,10 @@ def list_available() -> list[MenuItem]:
 def search_menu(query: str) -> list[MenuItem]:
     query = query.lower()
     return [item for item in _DB.values() if query in item.name.lower()]
+
+
+def items_by_category() -> dict[str, list[MenuItem]]:
+    groups: dict[str, list[MenuItem]] = {}
+    for item in _DB.values():
+        groups.setdefault(item.category, []).append(item)
+    return groups
