@@ -22,3 +22,7 @@ def create_cart_item(menu_item_id: int, quantity: int) -> CartItem:
 
 def get_cart_item(cart_item_id: int) -> CartItem | None:
     return _DB.get(cart_item_id)
+
+
+def list_cart_items() -> list[CartItem]:
+    return list(_DB.values())
