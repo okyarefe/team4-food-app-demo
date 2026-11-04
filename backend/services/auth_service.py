@@ -26,6 +26,7 @@ def create_user(email: str, password_hash: str, name: str) -> User:
 
 
 def get_user(user_id: int) -> User | None:
+    logger.info("get_user called")
     return _DB.get(user_id)
 
 
