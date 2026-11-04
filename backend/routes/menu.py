@@ -53,3 +53,9 @@ def delete_menu_item_route(item_id: int):
 def list_available_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.list_available(**data)))
+
+
+@bp.post("/search-menu")
+def search_menu_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.search_menu(**data)))
