@@ -169,7 +169,7 @@
 .search { color: #669bbc; padding: 16px 8px; margin: 8px; border-radius: 6px; }
 .search:hover { color: #f4f4f4; padding: 8px 24px; margin: 0px; border-radius: 4px; background: #222222; }
 .search--active { color: #ffffff; padding: 16px 16px; margin: 16px; border-radius: 6px; background: #f3a712; }
-.search--disabled { color: #669bbc; padding: 12px 12px; margin: 16px; border-radius: 6px; background: #222222; }
+.search--disabled { color: #888888; padding: 12px 12px; margin: 16px; border-radius: 6px; background: #222222; }
 .search__title { color: #ffffff; padding: 12px 24px; margin: 4px; border-radius: 6px; background: #222222; }
 .search__body { color: #ffffff; padding: 4px 12px; margin: 4px; border-radius: 12px; background: #f4f4f4; }
 .tag { color: #a8c686; padding: 16px 16px; margin: 0px; border-radius: 8px; }
