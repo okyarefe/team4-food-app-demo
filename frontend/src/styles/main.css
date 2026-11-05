@@ -113,7 +113,7 @@
 .label__title { color: #f3a712; padding: 12px 24px; margin: 0px; border-radius: 4px; }
 .label__body { color: #f4f4f4; padding: 4px 24px; margin: 0px; border-radius: 8px; background: #222222; }
 .card { color: #f4f4f4; padding: 4px 24px; margin: 8px; border-radius: 0px; background: #e4572e; }
-.card:hover { color: #a8c686; padding: 4px 8px; margin: 16px; border-radius: 6px; }
+.card:hover { color: #e4572e; padding: 4px 8px; margin: 16px; border-radius: 6px; }
 .card--active { color: #888888; padding: 4px 8px; margin: 16px; border-radius: 0px; background: #f3a712; }
 .card--disabled { color: #f3a712; padding: 16px 16px; margin: 16px; border-radius: 8px; }
 .card__title { color: #222222; padding: 16px 8px; margin: 4px; border-radius: 6px; background: #888888; }
