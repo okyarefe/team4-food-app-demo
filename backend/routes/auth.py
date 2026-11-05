@@ -53,3 +53,9 @@ def delete_user_route(item_id: int):
 def hash_password_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.hash_password(**data)))
+
+
+@bp.post("/verify-password")
+def verify_password_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.verify_password(**data)))
