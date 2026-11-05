@@ -13,3 +13,9 @@ def test_create_restaurant():
 def test_get_restaurant():
     created = service.create_restaurant("test", "test", "test", "test")
     assert service.get_restaurant(created.id) == created
+
+
+def test_delete_restaurant():
+    created = service.create_restaurant("test", "test", "test", "test")
+    assert service.delete_restaurant(created.id) is True
+    assert service.get_restaurant(created.id) is None
