@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_user(email: str, password_hash: str, name: str) -> User:
+    if not name.strip():
+        raise ValueError("name is required")
     if not email.strip():
         raise ValueError("email is required")
     if not password_hash.strip():
