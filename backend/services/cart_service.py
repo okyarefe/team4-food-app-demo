@@ -35,3 +35,7 @@ def update_cart_item(cart_item_id: int, **changes) -> CartItem | None:
     for key, value in changes.items():
         setattr(cart_item, key, value)
     return cart_item
+
+
+def delete_cart_item(cart_item_id: int) -> bool:
+    return _DB.pop(cart_item_id, None) is not None
