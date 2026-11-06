@@ -91,7 +91,7 @@
 .btn-primary { color: #669bbc; padding: 12px 8px; margin: 16px; border-radius: 8px; }
 .btn-primary:hover { color: #f3a712; padding: 12px 8px; margin: 8px; border-radius: 0px; background: #f4f4f4; }
 .btn-primary--active { color: #669bbc; padding: 16px 12px; margin: 4px; border-radius: 12px; background: #888888; }
-.btn-primary--disabled { color: #669bbc; padding: 8px 8px; margin: 4px; border-radius: 4px; background: #888888; }
+.btn-primary--disabled { color: #669bbc; padding: 4px 24px; margin: 4px; border-radius: 4px; background: #888888; }
 .btn-primary__title { color: #a8c686; padding: 8px 8px; margin: 0px; border-radius: 8px; background: #f4f4f4; }
 .btn-primary__body { color: #29335c; padding: 8px 8px; margin: 4px; border-radius: 8px; }
 .btn-secondary { color: #f4f4f4; padding: 16px 12px; margin: 8px; border-radius: 6px; background: #e4572e; }
