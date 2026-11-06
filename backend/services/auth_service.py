@@ -74,3 +74,9 @@ def verify_password(password: str, stored: str) -> bool:
     salt_hex, digest_hex = stored.split(":")
     digest = hashlib.pbkdf2_hmac("sha256", password.encode(), bytes.fromhex(salt_hex), 100_000)
     return digest.hex() == digest_hex
+
+
+def register_user(email: str, password: str, name: str) -> User:
+    if any(user.email == email for user in _DB.values()):
+        raise ValueError("email already registered")
+    return create_user(email, hash_password(password), name)
