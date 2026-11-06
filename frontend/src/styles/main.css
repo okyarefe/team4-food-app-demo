@@ -124,7 +124,7 @@
 .badge--disabled { color: #f4f4f4; padding: 4px 12px; margin: 0px; border-radius: 8px; background: #888888; }
 .badge__title { color: #a8c686; padding: 4px 12px; margin: 8px; border-radius: 4px; }
 .badge__body { color: #ffffff; padding: 12px 12px; margin: 8px; border-radius: 4px; }
-.modal { color: #888888; padding: 8px 24px; margin: 8px; border-radius: 6px; background: #f3a712; }
+.modal { color: #888888; padding: 4px 8px; margin: 8px; border-radius: 6px; background: #f3a712; }
 .modal:hover { color: #222222; padding: 16px 8px; margin: 8px; border-radius: 8px; }
 .modal--active { color: #ffffff; padding: 16px 24px; margin: 4px; border-radius: 6px; background: #888888; }
 .modal--disabled { color: #f4f4f4; padding: 8px 12px; margin: 8px; border-radius: 4px; }
