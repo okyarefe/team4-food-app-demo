@@ -47,3 +47,9 @@ def delete_cart_item_route(item_id: int):
     if not service.delete_cart_item(item_id):
         return jsonify({"error": "not found"}), 404
     return "", 204
+
+
+@bp.post("/add-to-cart")
+def add_to_cart_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.add_to_cart(**data)))
