@@ -53,3 +53,9 @@ def delete_cart_item_route(item_id: int):
 def add_to_cart_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.add_to_cart(**data)))
+
+
+@bp.post("/cart-total")
+def cart_total_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.cart_total(**data)))
