@@ -59,3 +59,9 @@ def hash_password_route():
 def verify_password_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.verify_password(**data)))
+
+
+@bp.post("/register-user")
+def register_user_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.register_user(**data)))
