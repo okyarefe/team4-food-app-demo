@@ -8,3 +8,7 @@ menu, cart, orders, payment, restaurants, reviews and delivery.
 Backend: `cd backend && pip install -r requirements.txt && flask --app app run --debug`
 
 Frontend: `cd frontend && npm install && npm run dev`
+
+## Tests
+
+Run `pytest` in the backend folder.
