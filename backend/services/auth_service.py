@@ -80,3 +80,10 @@ def register_user(email: str, password: str, name: str) -> User:
     if any(user.email == email for user in _DB.values()):
         raise ValueError("email already registered")
     return create_user(email, hash_password(password), name)
+
+
+def login(email: str, password: str) -> User | None:
+    for user in _DB.values():
+        if user.email == email and verify_password(password, user.password_hash):
+            return user
+    return None
