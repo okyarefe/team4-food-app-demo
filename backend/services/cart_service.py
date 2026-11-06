@@ -39,3 +39,11 @@ def update_cart_item(cart_item_id: int, **changes) -> CartItem | None:
 
 def delete_cart_item(cart_item_id: int) -> bool:
     return _DB.pop(cart_item_id, None) is not None
+
+
+def add_to_cart(menu_item_id: int, quantity: int = 1) -> CartItem:
+    for item in _DB.values():
+        if item.menu_item_id == menu_item_id:
+            item.quantity += quantity
+            return item
+    return create_cart_item(menu_item_id, quantity)
