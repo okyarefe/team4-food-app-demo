@@ -47,3 +47,7 @@ def add_to_cart(menu_item_id: int, quantity: int = 1) -> CartItem:
             item.quantity += quantity
             return item
     return create_cart_item(menu_item_id, quantity)
+
+
+def cart_total(prices: dict[int, float]) -> float:
+    return sum(prices[item.menu_item_id] * item.quantity for item in _DB.values())
