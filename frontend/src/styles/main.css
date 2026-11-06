@@ -87,7 +87,7 @@
 .btn--active { color: #888888; padding: 12px 24px; margin: 16px; border-radius: 6px; }
 .btn--disabled { color: #f4f4f4; padding: 12px 16px; margin: 8px; border-radius: 12px; background: #a8c686; }
 .btn__title { color: #669bbc; padding: 12px 12px; margin: 8px; border-radius: 6px; }
-.btn__body { color: #f4f4f4; padding: 12px 24px; margin: 8px; border-radius: 12px; }
+.btn__body { color: #29335c; padding: 12px 24px; margin: 8px; border-radius: 12px; }
 .btn-primary { color: #669bbc; padding: 12px 8px; margin: 16px; border-radius: 8px; }
 .btn-primary:hover { color: #f3a712; padding: 12px 8px; margin: 8px; border-radius: 0px; background: #f4f4f4; }
 .btn-primary--active { color: #669bbc; padding: 16px 12px; margin: 4px; border-radius: 12px; background: #888888; }
