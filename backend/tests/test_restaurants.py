@@ -19,3 +19,9 @@ def test_delete_restaurant():
     created = service.create_restaurant("test", "test", "test", "test")
     assert service.delete_restaurant(created.id) is True
     assert service.get_restaurant(created.id) is None
+
+
+def test_is_open_during_opening_hours():
+    restaurant = service.create_restaurant("Testi", "Main st 1", "10:00", "22:00")
+    assert service.is_open(restaurant, datetime(2026, 1, 1, 12, 0))
+    assert not service.is_open(restaurant, datetime(2026, 1, 1, 23, 0))
