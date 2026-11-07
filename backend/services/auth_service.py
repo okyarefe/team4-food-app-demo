@@ -87,3 +87,6 @@ def login(email: str, password: str) -> User | None:
         if user.email == email and verify_password(password, user.password_hash):
             return user
     return None
+
+
+# TODO: add more tests
