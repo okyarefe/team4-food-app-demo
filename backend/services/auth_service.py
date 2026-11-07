@@ -77,6 +77,7 @@ def verify_password(password: str, stored: str) -> bool:
 
 
 def register_user(email: str, password: str, name: str) -> User:
+    """Register user."""
     if any(user.email == email for user in _DB.values()):
         raise ValueError("email already registered")
     return create_user(email, hash_password(password), name)
