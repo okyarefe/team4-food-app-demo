@@ -59,3 +59,9 @@ def add_to_cart_route():
 def cart_total_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.cart_total(**data)))
+
+
+@bp.post("/clear-cart")
+def clear_cart_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.clear_cart(**data)))
