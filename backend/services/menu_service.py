@@ -36,6 +36,8 @@ def update_menu_item(menu_item_id: int, **changes) -> MenuItem | None:
     if menu_item is None:
         return None
     for key, value in changes.items():
+        if key == "id":
+            continue
         setattr(menu_item, key, value)
     return menu_item
 
