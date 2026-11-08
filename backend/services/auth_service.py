@@ -45,6 +45,7 @@ def list_users() -> list[User]:
 
 
 def update_user(user_id: int, **changes) -> User | None:
+    logger.info("update_user called")
     user = _DB.get(user_id)
     if user is None:
         return None
