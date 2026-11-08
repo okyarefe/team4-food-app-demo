@@ -85,6 +85,7 @@ def register_user(email: str, password: str, name: str) -> User:
 
 
 def login(email: str, password: str) -> User | None:
+    """Login."""
     for user in _DB.values():
         if user.email == email and verify_password(password, user.password_hash):
             return user
