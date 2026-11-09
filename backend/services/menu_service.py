@@ -58,6 +58,7 @@ def search_menu(query: str) -> list[MenuItem]:
 
 
 def items_by_category() -> dict[str, list[MenuItem]]:
+    """Items by category."""
     groups: dict[str, list[MenuItem]] = {}
     for item in _DB.values():
         groups.setdefault(item.category, []).append(item)
