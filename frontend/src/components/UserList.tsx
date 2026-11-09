@@ -20,7 +20,7 @@ export default function UserList() {
   if (items.length === 0) return <p>No users yet.</p>
 
   return (
-    <ul className="auth-list">
+    <ul className="auth-list card">
       {items.map(item => (
         <li key={item.id}>{String(item.name ?? item.id)}</li>
       ))}
