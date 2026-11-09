@@ -115,7 +115,7 @@
 .card { color: #f4f4f4; padding: 4px 24px; margin: 8px; border-radius: 0px; background: #e4572e; }
 .card:hover { color: #e4572e; padding: 4px 8px; margin: 16px; border-radius: 6px; }
 .card--active { color: #888888; padding: 4px 8px; margin: 16px; border-radius: 0px; background: #f3a712; }
-.card--disabled { color: #f3a712; padding: 16px 16px; margin: 16px; border-radius: 8px; }
+.card--disabled { color: #e4572e; padding: 16px 16px; margin: 16px; border-radius: 8px; }
 .card__title { color: #222222; padding: 16px 8px; margin: 4px; border-radius: 6px; background: #888888; }
 .card__body { color: #222222; padding: 8px 12px; margin: 0px; border-radius: 0px; }
 .badge { color: #f4f4f4; padding: 16px 24px; margin: 4px; border-radius: 4px; background: #f3a712; }
