@@ -13,6 +13,10 @@ export default function UserForm() {
         Email
         <input type="text" value={form.email ?? ''} onChange={e => update('email', e.target.value)} />
       </label>
+      <label>
+        Name
+        <input type="text" value={form.name ?? ''} onChange={e => update('name', e.target.value)} />
+      </label>
     </form>
   )
 }
