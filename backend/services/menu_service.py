@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_menu_item(name: str, price: float, category: str, available: bool) -> MenuItem:
+    if not category.strip():
+        raise ValueError("category is required")
     if price < 0:
         raise ValueError("price cannot be negative")
     global _next_id
