@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { listUsers } from '../api/auth'
 
+type User = { id: number; [key: string]: unknown }
+
 export default function UserList() {
-  const [items, setItems] = useState<any[]>([])
+  const [items, setItems] = useState<User[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -15,6 +17,7 @@ export default function UserList() {
 
   if (loading) return <p>Loading…</p>
   if (error) return <p className="error">{error}</p>
+  if (items.length === 0) return <p>No users yet.</p>
 
   return (
     <ul className="auth-list">
