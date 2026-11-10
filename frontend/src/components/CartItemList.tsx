@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { listCartItems } from '../api/cart'
 
+type CartItem = { id: number; [key: string]: unknown }
+
 export default function CartItemList() {
-  const [items, setItems] = useState<any[]>([])
+  const [items, setItems] = useState<CartItem[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -15,6 +17,7 @@ export default function CartItemList() {
 
   if (loading) return <p>Loading…</p>
   if (error) return <p className="error">{error}</p>
+  if (items.length === 0) return <p>No cart items yet.</p>
 
   return (
     <ul className="cart-list">
