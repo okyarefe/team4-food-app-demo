@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_menu_item(name: str, price: float, category: str, available: bool) -> MenuItem:
+    if not name.strip():
+        raise ValueError("name is required")
     if not category.strip():
         raise ValueError("category is required")
     if price < 0:
