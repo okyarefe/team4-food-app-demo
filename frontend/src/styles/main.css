@@ -61,7 +61,7 @@
 .review { color: #888888; padding: 8px 12px; margin: 4px; border-radius: 12px; }
 .review:hover { color: #ffffff; padding: 4px 8px; margin: 0px; border-radius: 0px; }
 .review--active { color: #669bbc; padding: 8px 24px; margin: 0px; border-radius: 8px; }
-.review--disabled { color: #888888; padding: 12px 16px; margin: 16px; border-radius: 4px; }
+.review--disabled { color: #888888; padding: 12px 8px; margin: 16px; border-radius: 4px; }
 .review__title { color: #222222; padding: 12px 24px; margin: 0px; border-radius: 0px; background: #222222; }
 .review__body { color: #f4f4f4; padding: 16px 12px; margin: 8px; border-radius: 12px; background: #ffffff; }
 .rating { color: #ffffff; padding: 16px 12px; margin: 8px; border-radius: 12px; }
