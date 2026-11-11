@@ -50,6 +50,8 @@ def update_user(user_id: int, **changes) -> User | None:
     if user is None:
         return None
     for key, value in changes.items():
+        if key == "id":
+            continue
         setattr(user, key, value)
     return user
 
