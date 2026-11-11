@@ -14,6 +14,8 @@ _next_id = 1
 
 def create_order(user_id: int, status: str, total: float) -> Order:
     """Create order."""
+    if user_id < 0:
+        raise ValueError("user_id cannot be negative")
     global _next_id
     order = Order(id=_next_id, user_id=user_id, status=status, total=total)
     _DB[_next_id] = order
