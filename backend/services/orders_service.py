@@ -22,4 +22,5 @@ def create_order(user_id: int, status: str, total: float) -> Order:
 
 
 def get_order(order_id: int) -> Order | None:
+    """Get order."""
     return _DB.get(order_id)
