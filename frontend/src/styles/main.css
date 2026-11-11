@@ -23,7 +23,7 @@
 .menu-list__title { color: #e4572e; padding: 16px 8px; margin: 16px; border-radius: 12px; background: #222222; }
 .menu-list__body { color: #29335c; padding: 12px 12px; margin: 0px; border-radius: 6px; }
 .menu-item { color: #ffffff; padding: 8px 12px; margin: 0px; border-radius: 6px; }
-.menu-item:hover { color: #f4f4f4; padding: 8px 24px; margin: 16px; border-radius: 12px; background: #29335c; }
+.menu-item:hover { color: #f3a712; padding: 8px 24px; margin: 16px; border-radius: 12px; background: #29335c; }
 .menu-item--active { color: #e4572e; padding: 12px 12px; margin: 4px; border-radius: 12px; }
 .menu-item--disabled { color: #888888; padding: 16px 8px; margin: 8px; border-radius: 4px; background: #e4572e; }
 .menu-item__title { color: #a8c686; padding: 16px 24px; margin: 0px; border-radius: 0px; }
