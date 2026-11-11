@@ -12,3 +12,7 @@ Frontend: `cd frontend && npm install && npm run dev`
 ## Tests
 
 Run `pytest` in the backend folder.
+
+## API
+
+- `/api/auth`: auth endpoints
