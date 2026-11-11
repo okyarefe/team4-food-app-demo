@@ -19,3 +19,7 @@ def create_order(user_id: int, status: str, total: float) -> Order:
     _DB[_next_id] = order
     _next_id += 1
     return order
+
+
+def get_order(order_id: int) -> Order | None:
+    return _DB.get(order_id)
