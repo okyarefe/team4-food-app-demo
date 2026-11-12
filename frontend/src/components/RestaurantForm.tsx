@@ -13,6 +13,10 @@ export default function RestaurantForm() {
         Name
         <input type="text" value={form.name ?? ''} onChange={e => update('name', e.target.value)} />
       </label>
+      <label>
+        Address
+        <input type="text" value={form.address ?? ''} onChange={e => update('address', e.target.value)} />
+      </label>
     </form>
   )
 }
