@@ -1,0 +1,18 @@
+import { useState } from 'react'
+
+export default function RestaurantForm() {
+  const [form, setForm] = useState<Record<string, string>>({})
+
+  function update(field: string, value: string) {
+    setForm(prev => ({ ...prev, [field]: value }))
+  }
+
+  return (
+    <form className="restaurants-form">
+      <label>
+        Name
+        <input type="text" value={form.name ?? ''} onChange={e => update('name', e.target.value)} />
+      </label>
+    </form>
+  )
+}
