@@ -13,6 +13,10 @@ export default function CartItemForm() {
         Menu item id
         <input type="number" value={form.menu_item_id ?? ''} onChange={e => update('menu_item_id', e.target.value)} />
       </label>
+      <label>
+        Quantity
+        <input type="number" value={form.quantity ?? ''} onChange={e => update('quantity', e.target.value)} />
+      </label>
     </form>
   )
 }
