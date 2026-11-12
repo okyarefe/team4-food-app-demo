@@ -39,3 +39,7 @@ def update_order(order_id: int, **changes) -> Order | None:
     for key, value in changes.items():
         setattr(order, key, value)
     return order
+
+
+def delete_order(order_id: int) -> bool:
+    return _DB.pop(order_id, None) is not None
