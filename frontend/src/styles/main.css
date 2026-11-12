@@ -1,7 +1,7 @@
 .header { color: #f4f4f4; padding: 12px 16px; margin: 0px; border-radius: 6px; }
 .header:hover { color: #669bbc; padding: 16px 24px; margin: 0px; border-radius: 0px; background: #669bbc; }
 .header--active { color: #29335c; padding: 4px 24px; margin: 16px; border-radius: 12px; }
-.header--disabled { color: #e4572e; padding: 16px 12px; margin: 8px; border-radius: 12px; background: #f3a712; }
+.header--disabled { color: #e4572e; padding: 12px 12px; margin: 8px; border-radius: 12px; background: #f3a712; }
 .header__title { color: #e4572e; padding: 16px 8px; margin: 8px; border-radius: 0px; }
 .header__body { color: #f3a712; padding: 4px 12px; margin: 16px; border-radius: 8px; }
 .nav { color: #f3a712; padding: 12px 16px; margin: 8px; border-radius: 8px; background: #ffffff; }
