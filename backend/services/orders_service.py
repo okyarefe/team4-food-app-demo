@@ -30,3 +30,12 @@ def get_order(order_id: int) -> Order | None:
 
 def list_orders() -> list[Order]:
     return list(_DB.values())
+
+
+def update_order(order_id: int, **changes) -> Order | None:
+    order = _DB.get(order_id)
+    if order is None:
+        return None
+    for key, value in changes.items():
+        setattr(order, key, value)
+    return order
