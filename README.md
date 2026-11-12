@@ -16,3 +16,5 @@ Run `pytest` in the backend folder.
 ## API
 
 - `/api/auth`: auth endpoints
+
+- `/api/menu`: menu endpoints
