@@ -47,3 +47,9 @@ def delete_order_route(item_id: int):
     if not service.delete_order(item_id):
         return jsonify({"error": "not found"}), 404
     return "", 204
+
+
+@bp.post("/calculate-total")
+def calculate_total_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.calculate_total(**data)))
