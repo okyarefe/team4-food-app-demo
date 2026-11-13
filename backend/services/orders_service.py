@@ -47,3 +47,10 @@ def update_order(order_id: int, **changes) -> Order | None:
 
 def delete_order(order_id: int) -> bool:
     return _DB.pop(order_id, None) is not None
+
+
+def calculate_total(lines: list[tuple[float, int]]) -> float:
+    total = 0.0
+    for price, quantity in lines:
+        total += price * quantity
+    return total
