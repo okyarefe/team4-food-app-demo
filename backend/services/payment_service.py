@@ -18,3 +18,7 @@ def create_payment(order_id: int, amount: float, status: str, provider_ref: str)
     _DB[_next_id] = payment
     _next_id += 1
     return payment
+
+
+def get_payment(payment_id: int) -> Payment | None:
+    return _DB.get(payment_id)
