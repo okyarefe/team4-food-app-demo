@@ -14,6 +14,8 @@ _next_id = 1
 
 def create_order(user_id: int, status: str, total: float) -> Order:
     """Create order."""
+    if not status.strip():
+        raise ValueError("status is required")
     if total < 0:
         raise ValueError("total cannot be negative")
     if user_id < 0:
