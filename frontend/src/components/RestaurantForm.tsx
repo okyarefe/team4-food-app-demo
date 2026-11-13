@@ -21,6 +21,10 @@ export default function RestaurantForm() {
         Opens at
         <input type="text" value={form.opens_at ?? ''} onChange={e => update('opens_at', e.target.value)} />
       </label>
+      <label>
+        Closes at
+        <input type="text" value={form.closes_at ?? ''} onChange={e => update('closes_at', e.target.value)} />
+      </label>
     </form>
   )
 }
