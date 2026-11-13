@@ -54,3 +54,6 @@ def calculate_total(lines: list[tuple[float, int]]) -> float:
     for price, quantity in lines:
         total += price * quantity
     return total
+
+
+# TODO: add more tests
