@@ -33,6 +33,8 @@ def update_cart_item(cart_item_id: int, **changes) -> CartItem | None:
     if cart_item is None:
         return None
     for key, value in changes.items():
+        if key == "id":
+            continue
         setattr(cart_item, key, value)
     return cart_item
 
