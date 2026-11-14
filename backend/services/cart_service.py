@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_cart_item(menu_item_id: int, quantity: int) -> CartItem:
+    if menu_item_id < 0:
+        raise ValueError("menu_item_id cannot be negative")
     global _next_id
     cart_item = CartItem(id=_next_id, menu_item_id=menu_item_id, quantity=quantity)
     _DB[_next_id] = cart_item
