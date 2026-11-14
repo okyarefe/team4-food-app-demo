@@ -22,3 +22,7 @@ def create_payment(order_id: int, amount: float, status: str, provider_ref: str)
 
 def get_payment(payment_id: int) -> Payment | None:
     return _DB.get(payment_id)
+
+
+def list_payments() -> list[Payment]:
+    return list(_DB.values())
