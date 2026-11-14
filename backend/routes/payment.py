@@ -32,3 +32,9 @@ def get_payment_route(item_id: int):
 @bp.get("")
 def list_payments_route():
     return jsonify(_to_json(service.list_payments()))
+
+
+@bp.post("/create-payment-intent")
+def create_payment_intent_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.create_payment_intent(**data)))
