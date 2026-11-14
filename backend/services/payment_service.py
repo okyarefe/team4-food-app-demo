@@ -26,3 +26,9 @@ def get_payment(payment_id: int) -> Payment | None:
 
 def list_payments() -> list[Payment]:
     return list(_DB.values())
+
+
+def create_payment_intent(order_id: int, amount: float) -> Payment:
+    if amount <= 0:
+        raise ValueError("amount must be positive")
+    return create_payment(order_id, amount, "pending", str(uuid.uuid4()))
