@@ -57,3 +57,19 @@ def calculate_total(lines: list[tuple[float, int]]) -> float:
 
 
 # TODO: add more tests
+
+
+ALLOWED_STATUS = {
+    "new": ["paid", "cancelled"],
+    "paid": ["preparing", "cancelled"],
+    "preparing": ["on_the_way"],
+    "on_the_way": ["delivered"],
+}
+
+
+def update_status(order_id: int, new_status: str) -> Order:
+    order = _DB[order_id]
+    if new_status not in ALLOWED_STATUS.get(order.status, []):
+        raise ValueError(f"cannot go from {order.status} to {new_status}")
+    order.status = new_status
+    return order
