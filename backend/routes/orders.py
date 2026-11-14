@@ -53,3 +53,9 @@ def delete_order_route(item_id: int):
 def calculate_total_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.calculate_total(**data)))
+
+
+@bp.post("/update-status")
+def update_status_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.update_status(**data)))
