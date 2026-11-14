@@ -78,3 +78,6 @@ def update_status(order_id: int, new_status: str) -> Order:
 
 def orders_for_user(user_id: int) -> list[Order]:
     return [order for order in _DB.values() if order.user_id == user_id]
+
+
+# TODO: check with team
