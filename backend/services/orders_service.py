@@ -37,6 +37,7 @@ def list_orders() -> list[Order]:
 
 
 def update_order(order_id: int, **changes) -> Order | None:
+    """Update order."""
     order = _DB.get(order_id)
     if order is None:
         return None
