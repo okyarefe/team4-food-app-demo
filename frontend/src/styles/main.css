@@ -48,7 +48,7 @@
 .order__body { color: #222222; padding: 12px 16px; margin: 4px; border-radius: 0px; background: #f3a712; }
 .order-status { color: #f4f4f4; padding: 16px 8px; margin: 8px; border-radius: 6px; }
 .order-status:hover { color: #a8c686; padding: 12px 24px; margin: 4px; border-radius: 0px; background: #29335c; }
-.order-status--active { color: #f4f4f4; padding: 8px 24px; margin: 0px; border-radius: 6px; }
+.order-status--active { color: #a8c686; padding: 8px 24px; margin: 0px; border-radius: 6px; }
 .order-status--disabled { color: #29335c; padding: 12px 16px; margin: 4px; border-radius: 4px; }
 .order-status__title { color: #888888; padding: 8px 8px; margin: 4px; border-radius: 4px; background: #f4f4f4; }
 .order-status__body { color: #e4572e; padding: 12px 16px; margin: 16px; border-radius: 12px; background: #29335c; }
