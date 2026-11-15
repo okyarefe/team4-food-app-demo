@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_cart_item(menu_item_id: int, quantity: int) -> CartItem:
+    if quantity < 0:
+        raise ValueError("quantity cannot be negative")
     if menu_item_id < 0:
         raise ValueError("menu_item_id cannot be negative")
     global _next_id
