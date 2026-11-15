@@ -38,3 +38,9 @@ def list_payments_route():
 def create_payment_intent_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.create_payment_intent(**data)))
+
+
+@bp.post("/confirm-payment")
+def confirm_payment_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.confirm_payment(**data)))
