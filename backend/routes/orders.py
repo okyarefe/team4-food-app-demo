@@ -59,3 +59,9 @@ def calculate_total_route():
 def update_status_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.update_status(**data)))
+
+
+@bp.post("/orders-for-user")
+def orders_for_user_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.orders_for_user(**data)))
