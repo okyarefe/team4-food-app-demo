@@ -32,3 +32,23 @@ def create_payment_intent(order_id: int, amount: float) -> Payment:
     if amount <= 0:
         raise ValueError("amount must be positive")
     return create_payment(order_id, amount, "pending", str(uuid.uuid4()))
+
+
+PROVIDER_URL = "https://api.payments.example.com/v1/confirm"
+
+
+def confirm_payment(payment_id: int) -> Payment:
+    import requests
+
+    payment = _DB[payment_id]
+    response = requests.post(
+        PROVIDER_URL,
+        json={"ref": payment.provider_ref, "amount": payment.amount},
+        headers={"Authorization": f"Bearer {os.getenv('PAYMENT_KEY')}"},
+        timeout=10,
+    )
+    if response.status_code == 200:
+        payment.status = "confirmed"
+    else:
+        payment.status = "failed"
+    return payment
