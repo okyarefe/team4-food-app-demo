@@ -33,6 +33,7 @@ def get_order(order_id: int) -> Order | None:
 
 
 def list_orders() -> list[Order]:
+    """List orders."""
     return list(_DB.values())
 
 
