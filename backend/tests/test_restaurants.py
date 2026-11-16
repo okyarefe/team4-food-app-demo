@@ -25,3 +25,7 @@ def test_is_open_during_opening_hours():
     restaurant = service.create_restaurant("Testi", "Main st 1", "10:00", "22:00")
     assert service.is_open(restaurant, datetime(2026, 1, 1, 12, 0))
     assert not service.is_open(restaurant, datetime(2026, 1, 1, 23, 0))
+
+
+def test_get_restaurant_missing_returns_none():
+    assert service.get_restaurant(999_999) is None
