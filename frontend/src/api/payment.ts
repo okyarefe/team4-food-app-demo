@@ -9,3 +9,9 @@ export async function createPayment(data: Record<string, unknown>) {
   if (!res.ok) throw new Error('Could not save')
   return res.json()
 }
+
+export async function listPayments() {
+  const res = await fetch(BASE)
+  if (!res.ok) throw new Error('Failed to load payments')
+  return res.json()
+}
