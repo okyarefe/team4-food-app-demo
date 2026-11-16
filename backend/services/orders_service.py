@@ -52,6 +52,7 @@ def delete_order(order_id: int) -> bool:
 
 
 def calculate_total(lines: list[tuple[float, int]]) -> float:
+    """Calculate total."""
     total = 0.0
     for price, quantity in lines:
         total += price * quantity
