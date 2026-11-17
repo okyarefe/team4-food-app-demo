@@ -13,6 +13,10 @@ export default function PaymentForm() {
         Order id
         <input type="number" value={form.order_id ?? ''} onChange={e => update('order_id', e.target.value)} />
       </label>
+      <label>
+        Amount
+        <input type="number" value={form.amount ?? ''} onChange={e => update('amount', e.target.value)} />
+      </label>
     </form>
   )
 }
