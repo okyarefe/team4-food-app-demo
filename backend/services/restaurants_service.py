@@ -33,6 +33,8 @@ def update_restaurant(restaurant_id: int, **changes) -> Restaurant | None:
     if restaurant is None:
         return None
     for key, value in changes.items():
+        if key == "id":
+            continue
         setattr(restaurant, key, value)
     return restaurant
 
