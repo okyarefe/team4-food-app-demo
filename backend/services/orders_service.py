@@ -87,3 +87,6 @@ def orders_for_user(user_id: int) -> list[Order]:
 
 
 # TODO: cleanup
+
+
+# TODO: move this to config
