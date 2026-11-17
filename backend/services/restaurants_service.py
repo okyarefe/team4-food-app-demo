@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_restaurant(name: str, address: str, opens_at: str, closes_at: str) -> Restaurant:
+    if not name.strip():
+        raise ValueError("name is required")
     global _next_id
     restaurant = Restaurant(id=_next_id, name=name, address=address, opens_at=opens_at, closes_at=closes_at)
     _DB[_next_id] = restaurant
