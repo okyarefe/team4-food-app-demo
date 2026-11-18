@@ -93,3 +93,6 @@ def orders_for_user(user_id: int) -> list[Order]:
 
 
 # TODO: handle errors properly
+
+
+# TODO: use real database later
