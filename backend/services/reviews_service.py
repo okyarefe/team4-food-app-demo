@@ -22,3 +22,7 @@ def create_review(restaurant_id: int, user_id: int, rating: int, comment: str) -
 
 def get_review(review_id: int) -> Review | None:
     return _DB.get(review_id)
+
+
+def list_reviews() -> list[Review]:
+    return list(_DB.values())
