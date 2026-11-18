@@ -18,3 +18,7 @@ def create_review(restaurant_id: int, user_id: int, rating: int, comment: str) -
     _DB[_next_id] = review
     _next_id += 1
     return review
+
+
+def get_review(review_id: int) -> Review | None:
+    return _DB.get(review_id)
