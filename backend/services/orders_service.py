@@ -90,3 +90,6 @@ def orders_for_user(user_id: int) -> list[Order]:
 
 
 # TODO: move this to config
+
+
+# TODO: handle errors properly
