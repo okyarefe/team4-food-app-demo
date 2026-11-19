@@ -17,6 +17,10 @@ export default function OrderForm() {
         Status
         <input type="text" value={form.status ?? ''} onChange={e => update('status', e.target.value)} />
       </label>
+      <label>
+        Total
+        <input type="number" value={form.total ?? ''} onChange={e => update('total', e.target.value)} />
+      </label>
     </form>
   )
 }
