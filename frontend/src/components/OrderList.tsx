@@ -20,7 +20,7 @@ export default function OrderList() {
   if (items.length === 0) return <p>No orders yet.</p>
 
   return (
-    <ul className="orders-list">
+    <ul className="orders-list card">
       {items.map(item => (
         <li key={item.id}>{String(item.name ?? item.id)}</li>
       ))}
