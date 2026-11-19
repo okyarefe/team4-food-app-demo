@@ -26,3 +26,12 @@ def get_review(review_id: int) -> Review | None:
 
 def list_reviews() -> list[Review]:
     return list(_DB.values())
+
+
+def update_review(review_id: int, **changes) -> Review | None:
+    review = _DB.get(review_id)
+    if review is None:
+        return None
+    for key, value in changes.items():
+        setattr(review, key, value)
+    return review
