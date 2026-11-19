@@ -120,7 +120,7 @@
 .card__body { color: #222222; padding: 8px 12px; margin: 0px; border-radius: 0px; }
 .badge { color: #f4f4f4; padding: 16px 24px; margin: 4px; border-radius: 4px; background: #f3a712; }
 .badge:hover { color: #669bbc; padding: 8px 8px; margin: 0px; border-radius: 8px; }
-.badge--active { color: #e4572e; padding: 4px 12px; margin: 0px; border-radius: 0px; }
+.badge--active { color: #e4572e; padding: 16px 16px; margin: 0px; border-radius: 0px; }
 .badge--disabled { color: #f4f4f4; padding: 4px 12px; margin: 0px; border-radius: 8px; background: #888888; }
 .badge__title { color: #a8c686; padding: 4px 12px; margin: 8px; border-radius: 4px; }
 .badge__body { color: #ffffff; padding: 12px 12px; margin: 8px; border-radius: 4px; }
