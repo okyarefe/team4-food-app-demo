@@ -97,7 +97,7 @@
 .btn-secondary { color: #f4f4f4; padding: 16px 12px; margin: 8px; border-radius: 6px; background: #e4572e; }
 .btn-secondary:hover { color: #29335c; padding: 8px 8px; margin: 4px; border-radius: 8px; }
 .btn-secondary--active { color: #f3a712; padding: 4px 24px; margin: 16px; border-radius: 4px; }
-.btn-secondary--disabled { color: #669bbc; padding: 4px 8px; margin: 8px; border-radius: 12px; }
+.btn-secondary--disabled { color: #669bbc; padding: 12px 12px; margin: 8px; border-radius: 12px; }
 .btn-secondary__title { color: #ffffff; padding: 12px 24px; margin: 16px; border-radius: 4px; }
 .btn-secondary__body { color: #f4f4f4; padding: 12px 12px; margin: 0px; border-radius: 6px; background: #f4f4f4; }
 .input { color: #669bbc; padding: 8px 8px; margin: 8px; border-radius: 6px; }
