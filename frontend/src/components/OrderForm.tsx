@@ -21,7 +21,7 @@ export default function OrderForm() {
   }
 
   return (
-    <form className="orders-form" onSubmit={submit}>
+    <form className="orders-form" aria-label="orders form" onSubmit={submit}>
       <label>
         User id
         <input type="number" value={form.user_id ?? ''} onChange={e => update('user_id', e.target.value)} />
