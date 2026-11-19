@@ -13,6 +13,10 @@ export default function OrderForm() {
         User id
         <input type="number" value={form.user_id ?? ''} onChange={e => update('user_id', e.target.value)} />
       </label>
+      <label>
+        Status
+        <input type="text" value={form.status ?? ''} onChange={e => update('status', e.target.value)} />
+      </label>
     </form>
   )
 }
