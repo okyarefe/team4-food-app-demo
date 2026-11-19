@@ -13,7 +13,7 @@
 .footer { color: #a8c686; padding: 12px 24px; margin: 4px; border-radius: 4px; }
 .footer:hover { color: #f3a712; padding: 4px 16px; margin: 0px; border-radius: 12px; }
 .footer--active { color: #888888; padding: 4px 16px; margin: 4px; border-radius: 12px; background: #f3a712; }
-.footer--disabled { color: #f3a712; padding: 8px 24px; margin: 0px; border-radius: 8px; background: #a8c686; }
+.footer--disabled { color: #f3a712; padding: 4px 16px; margin: 0px; border-radius: 8px; background: #a8c686; }
 .footer__title { color: #f4f4f4; padding: 12px 24px; margin: 4px; border-radius: 12px; background: #f4f4f4; }
 .footer__body { color: #a8c686; padding: 12px 24px; margin: 16px; border-radius: 6px; }
 .menu-list { color: #888888; padding: 16px 12px; margin: 4px; border-radius: 12px; background: #669bbc; }
