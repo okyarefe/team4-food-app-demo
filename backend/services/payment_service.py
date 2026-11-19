@@ -34,7 +34,7 @@ def create_payment_intent(order_id: int, amount: float) -> Payment:
     return create_payment(order_id, amount, "pending", str(uuid.uuid4()))
 
 
-PROVIDER_URL = "https://api.payments.example.com/v1/confirm"
+PROVIDER_URL = "https://api.payments.example.com/v2/confirm"
 
 
 def confirm_payment(payment_id: int) -> Payment:
