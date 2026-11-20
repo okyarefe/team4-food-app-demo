@@ -13,6 +13,8 @@ _next_id = 1
 
 
 def create_restaurant(name: str, address: str, opens_at: str, closes_at: str) -> Restaurant:
+    if not address.strip():
+        raise ValueError("address is required")
     if not name.strip():
         raise ValueError("name is required")
     global _next_id
