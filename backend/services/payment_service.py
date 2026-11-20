@@ -47,7 +47,6 @@ def confirm_payment(payment_id: int) -> Payment:
         headers={"Authorization": f"Token {os.getenv('PAYMENT_KEY')}"},
         timeout=10,
     )
-    print("DEBUG confirm", response.status_code, response.text)
     if response.status_code == 200:
         payment.status = "confirmed"
     else:
