@@ -39,3 +39,10 @@ def update_review(review_id: int, **changes) -> Review | None:
 
 def delete_review(review_id: int) -> bool:
     return _DB.pop(review_id, None) is not None
+
+
+def average_rating(restaurant_id: int) -> float | None:
+    ratings = [r.rating for r in _DB.values() if r.restaurant_id == restaurant_id]
+    if not ratings:
+        return None
+    return sum(ratings) / len(ratings)
