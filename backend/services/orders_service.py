@@ -56,7 +56,7 @@ def calculate_total(lines: list[tuple[float, int]]) -> float:
     total = 0.0
     for price, quantity in lines:
         total += price * quantity
-    return total
+    return round(total, 2)
 
 
 # TODO: add more tests
