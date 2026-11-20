@@ -35,3 +35,7 @@ def update_review(review_id: int, **changes) -> Review | None:
     for key, value in changes.items():
         setattr(review, key, value)
     return review
+
+
+def delete_review(review_id: int) -> bool:
+    return _DB.pop(review_id, None) is not None
