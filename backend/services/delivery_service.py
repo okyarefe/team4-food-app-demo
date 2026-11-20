@@ -19,3 +19,7 @@ def create_delivery(order_id: int, address: str, eta_minutes: int, status: str) 
     _DB[_next_id] = delivery
     _next_id += 1
     return delivery
+
+
+def get_delivery(delivery_id: int) -> Delivery | None:
+    return _DB.get(delivery_id)
