@@ -46,3 +46,7 @@ def average_rating(restaurant_id: int) -> float | None:
     if not ratings:
         return None
     return sum(ratings) / len(ratings)
+
+
+def reviews_for_restaurant(restaurant_id: int) -> list[Review]:
+    return [r for r in _DB.values() if r.restaurant_id == restaurant_id]
