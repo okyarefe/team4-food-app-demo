@@ -43,6 +43,8 @@ def update_order(order_id: int, **changes) -> Order | None:
     if order is None:
         return None
     for key, value in changes.items():
+        if key == "id":
+            continue
         setattr(order, key, value)
     return order
 
