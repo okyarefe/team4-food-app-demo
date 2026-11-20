@@ -47,3 +47,9 @@ def delete_review_route(item_id: int):
     if not service.delete_review(item_id):
         return jsonify({"error": "not found"}), 404
     return "", 204
+
+
+@bp.post("/average-rating")
+def average_rating_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.average_rating(**data)))
