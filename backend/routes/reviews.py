@@ -40,3 +40,10 @@ def update_review_route(item_id: int):
     if result is None:
         return jsonify({"error": "not found"}), 404
     return jsonify(_to_json(result))
+
+
+@bp.delete("/<int:item_id>")
+def delete_review_route(item_id: int):
+    if not service.delete_review(item_id):
+        return jsonify({"error": "not found"}), 404
+    return "", 204
