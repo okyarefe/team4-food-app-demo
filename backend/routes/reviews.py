@@ -53,3 +53,9 @@ def delete_review_route(item_id: int):
 def average_rating_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.average_rating(**data)))
+
+
+@bp.post("/reviews-for-restaurant")
+def reviews_for_restaurant_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.reviews_for_restaurant(**data)))
