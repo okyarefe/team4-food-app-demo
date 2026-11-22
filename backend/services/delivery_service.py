@@ -28,3 +28,7 @@ def get_delivery(delivery_id: int) -> Delivery | None:
 
 
 # TODO: move this to config
+
+
+def list_deliveries() -> list[Delivery]:
+    return list(_DB.values())
