@@ -25,3 +25,6 @@ def create_delivery(order_id: int, address: str, eta_minutes: int, status: str) 
 def get_delivery(delivery_id: int) -> Delivery | None:
     logger.info("get_delivery called")
     return _DB.get(delivery_id)
+
+
+# TODO: move this to config
