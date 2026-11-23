@@ -11,7 +11,6 @@ export default function PaymentForm() {
 
   async function submit(event: FormEvent) {
     event.preventDefault()
-    console.log('submitting payment', form)
     if (!form.order_id) {
       setMessage('Order id is required')
       return
