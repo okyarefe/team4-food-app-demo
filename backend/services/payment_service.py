@@ -44,7 +44,7 @@ def confirm_payment(payment_id: int) -> Payment:
     response = requests.post(
         PROVIDER_URL,
         json={"ref": payment.provider_ref, "amount": payment.amount},
-        headers={"Authorization": f"Token {os.getenv('PAYMENT_KEY')}"},
+        headers={"Authorization": f"Bearer {os.getenv('PAYMENT_KEY')}"},
         timeout=5,
     )
     print("DEBUG confirm", response.status_code, response.text)
