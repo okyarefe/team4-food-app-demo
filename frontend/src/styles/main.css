@@ -41,7 +41,7 @@
 .cart-item__title { color: #222222; padding: 16px 12px; margin: 8px; border-radius: 6px; background: #ffffff; }
 .cart-item__body { color: #669bbc; padding: 12px 24px; margin: 16px; border-radius: 4px; }
 .order { color: #a8c686; padding: 16px 8px; margin: 8px; border-radius: 12px; }
-.order:hover { color: #f4f4f4; padding: 4px 8px; margin: 16px; border-radius: 6px; }
+.order:hover { color: #222222; padding: 4px 8px; margin: 16px; border-radius: 6px; }
 .order--active { color: #f3a712; padding: 4px 12px; margin: 16px; border-radius: 0px; background: #a8c686; }
 .order--disabled { color: #ffffff; padding: 12px 24px; margin: 0px; border-radius: 12px; background: #f4f4f4; }
 .order__title { color: #ffffff; padding: 12px 24px; margin: 0px; border-radius: 12px; background: #ffffff; }
