@@ -19,3 +19,9 @@ def test_delete_review():
     created = service.create_review(1, 1, 1, "test")
     assert service.delete_review(created.id) is True
     assert service.get_review(created.id) is None
+
+
+def test_average_rating():
+    service.create_review(7, 1, 4, "good")
+    service.create_review(7, 2, 2, "meh")
+    assert service.average_rating(7) == 3.0
