@@ -41,3 +41,6 @@ def update_delivery(delivery_id: int, **changes) -> Delivery | None:
     for key, value in changes.items():
         setattr(delivery, key, value)
     return delivery
+
+
+# TODO: add more tests
