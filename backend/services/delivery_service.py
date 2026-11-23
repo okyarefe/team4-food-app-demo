@@ -32,3 +32,12 @@ def get_delivery(delivery_id: int) -> Delivery | None:
 
 def list_deliveries() -> list[Delivery]:
     return list(_DB.values())
+
+
+def update_delivery(delivery_id: int, **changes) -> Delivery | None:
+    delivery = _DB.get(delivery_id)
+    if delivery is None:
+        return None
+    for key, value in changes.items():
+        setattr(delivery, key, value)
+    return delivery
