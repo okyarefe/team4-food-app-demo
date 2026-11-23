@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { createPayment } from '../api/payment'
 
 export default function PaymentForm() {
+  // TODO: confirm still fails with 401, ask someone?
   const [form, setForm] = useState<Record<string, string>>({})
   const [message, setMessage] = useState('')
 
