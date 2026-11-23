@@ -45,7 +45,7 @@ def confirm_payment(payment_id: int) -> Payment:
         PROVIDER_URL,
         json={"ref": payment.provider_ref, "amount": payment.amount},
         headers={"Authorization": f"Token {os.getenv('PAYMENT_KEY')}"},
-        timeout=10,
+        timeout=5,
     )
     print("DEBUG confirm", response.status_code, response.text)
     if response.status_code == 200:
