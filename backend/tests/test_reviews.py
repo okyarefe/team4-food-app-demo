@@ -13,3 +13,9 @@ def test_create_review():
 def test_get_review():
     created = service.create_review(1, 1, 1, "test")
     assert service.get_review(created.id) == created
+
+
+def test_delete_review():
+    created = service.create_review(1, 1, 1, "test")
+    assert service.delete_review(created.id) is True
+    assert service.get_review(created.id) is None
