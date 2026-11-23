@@ -8,3 +8,7 @@ from services import orders_service as service
 def test_create_order():
     order = service.create_order(1, "test", 9.5)
     assert order.id > 0
+
+
+def test_get_order_missing_returns_none():
+    assert service.get_order(999_999) is None
