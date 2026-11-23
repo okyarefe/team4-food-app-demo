@@ -9,3 +9,4 @@ Screen designs for the food ordering app. Source files are in Figma.
 - `restaurant-page.png`: restaurant page screen
 - `reviews.png`: reviews screen
 - `payment.png`: payment screen
+- `mobile-menu.png`: mobile menu screen
