@@ -32,3 +32,11 @@ def get_delivery_route(item_id: int):
 @bp.get("")
 def list_deliveries_route():
     return jsonify(_to_json(service.list_deliveries()))
+
+
+@bp.patch("/<int:item_id>")
+def update_delivery_route(item_id: int):
+    result = service.update_delivery(item_id, **(request.get_json() or {}))
+    if result is None:
+        return jsonify({"error": "not found"}), 404
+    return jsonify(_to_json(result))
