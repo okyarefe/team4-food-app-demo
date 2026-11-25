@@ -47,3 +47,9 @@ def delete_delivery_route(item_id: int):
     if not service.delete_delivery(item_id):
         return jsonify({"error": "not found"}), 404
     return "", 204
+
+
+@bp.post("/estimate-eta")
+def estimate_eta_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.estimate_eta(**data)))
