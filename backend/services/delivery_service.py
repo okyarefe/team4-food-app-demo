@@ -14,6 +14,8 @@ _next_id = 1
 
 def create_delivery(order_id: int, address: str, eta_minutes: int, status: str) -> Delivery:
     """Create delivery."""
+    if order_id < 0:
+        raise ValueError("order_id cannot be negative")
     if eta_minutes < 0:
         raise ValueError("eta_minutes cannot be negative")
     if not status.strip():
