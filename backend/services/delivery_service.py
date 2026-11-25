@@ -14,6 +14,8 @@ _next_id = 1
 
 def create_delivery(order_id: int, address: str, eta_minutes: int, status: str) -> Delivery:
     """Create delivery."""
+    if not status.strip():
+        raise ValueError("status is required")
     logger.info("create_delivery called")
     global _next_id
     delivery = Delivery(id=_next_id, order_id=order_id, address=address, eta_minutes=eta_minutes, status=status)
