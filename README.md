@@ -22,3 +22,5 @@ Run `pytest` in the backend folder.
 - `/api/cart`: cart endpoints
 
 - `/api/orders`: orders endpoints
+
+- `/api/restaurants`: restaurants endpoints
