@@ -106,7 +106,7 @@
 .input--disabled { color: #e4572e; padding: 12px 24px; margin: 4px; border-radius: 8px; }
 .input__title { color: #ffffff; padding: 12px 8px; margin: 8px; border-radius: 6px; }
 .input__body { color: #e4572e; padding: 4px 24px; margin: 8px; border-radius: 4px; background: #888888; }
-.label { color: #29335c; padding: 4px 16px; margin: 8px; border-radius: 12px; background: #f3a712; }
+.label { color: #f3a712; padding: 4px 16px; margin: 8px; border-radius: 12px; background: #f3a712; }
 .label:hover { color: #f4f4f4; padding: 8px 24px; margin: 8px; border-radius: 8px; }
 .label--active { color: #f4f4f4; padding: 8px 12px; margin: 0px; border-radius: 12px; background: #ffffff; }
 .label--disabled { color: #29335c; padding: 4px 8px; margin: 4px; border-radius: 12px; }
