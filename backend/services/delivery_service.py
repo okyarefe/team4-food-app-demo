@@ -57,3 +57,10 @@ def update_delivery(delivery_id: int, **changes) -> Delivery | None:
 
 def delete_delivery(delivery_id: int) -> bool:
     return _DB.pop(delivery_id, None) is not None
+
+
+def estimate_eta(distance_km: float, busy: bool = False) -> int:
+    minutes = 15 + distance_km * 4
+    if busy:
+        minutes *= 1.5
+    return int(minutes)
