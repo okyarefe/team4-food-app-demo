@@ -49,3 +49,7 @@ def update_delivery(delivery_id: int, **changes) -> Delivery | None:
 
 
 # TODO: use real database later
+
+
+def delete_delivery(delivery_id: int) -> bool:
+    return _DB.pop(delivery_id, None) is not None
