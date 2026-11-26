@@ -20,7 +20,7 @@
 .menu-list:hover { color: #e4572e; padding: 16px 16px; margin: 0px; border-radius: 12px; }
 .menu-list--active { color: #669bbc; padding: 4px 12px; margin: 8px; border-radius: 8px; }
 .menu-list--disabled { color: #f3a712; padding: 16px 8px; margin: 4px; border-radius: 8px; }
-.menu-list__title { color: #e4572e; padding: 16px 8px; margin: 16px; border-radius: 12px; background: #222222; }
+.menu-list__title { color: #e4572e; padding: 8px 24px; margin: 16px; border-radius: 12px; background: #222222; }
 .menu-list__body { color: #29335c; padding: 12px 12px; margin: 0px; border-radius: 6px; }
 .menu-item { color: #ffffff; padding: 8px 12px; margin: 0px; border-radius: 6px; }
 .menu-item:hover { color: #f3a712; padding: 8px 24px; margin: 16px; border-radius: 12px; background: #29335c; }
