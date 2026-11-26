@@ -79,3 +79,6 @@ def assign_courier(delivery_id: int, courier_name: str) -> Delivery:
 
 
 # TODO: add pagination
+
+
+# TODO: handle errors properly
