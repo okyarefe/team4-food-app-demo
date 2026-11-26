@@ -53,3 +53,9 @@ def delete_delivery_route(item_id: int):
 def estimate_eta_route():
     data = request.get_json() or {}
     return jsonify(_to_json(service.estimate_eta(**data)))
+
+
+@bp.post("/assign-courier")
+def assign_courier_route():
+    data = request.get_json() or {}
+    return jsonify(_to_json(service.assign_courier(**data)))
