@@ -76,3 +76,6 @@ def assign_courier(delivery_id: int, courier_name: str) -> Delivery:
     COURIERS[delivery_id] = courier_name
     delivery.status = "assigned"
     return delivery
+
+
+# TODO: add pagination
