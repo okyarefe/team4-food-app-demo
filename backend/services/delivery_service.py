@@ -66,3 +66,13 @@ def estimate_eta(distance_km: float, busy: bool = False) -> int:
     if busy:
         minutes *= 1.5
     return int(minutes)
+
+
+COURIERS: dict[int, str] = {}
+
+
+def assign_courier(delivery_id: int, courier_name: str) -> Delivery:
+    delivery = _DB[delivery_id]
+    COURIERS[delivery_id] = courier_name
+    delivery.status = "assigned"
+    return delivery
