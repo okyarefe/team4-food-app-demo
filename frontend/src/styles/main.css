@@ -29,7 +29,7 @@
 .menu-item__title { color: #a8c686; padding: 16px 24px; margin: 0px; border-radius: 0px; }
 .menu-item__body { color: #f4f4f4; padding: 4px 12px; margin: 4px; border-radius: 6px; background: #ffffff; }
 .cart { color: #a8c686; padding: 16px 12px; margin: 0px; border-radius: 12px; }
-.cart:hover { color: #29335c; padding: 4px 24px; margin: 16px; border-radius: 0px; }
+.cart:hover { color: #e4572e; padding: 4px 24px; margin: 16px; border-radius: 0px; }
 .cart--active { color: #ffffff; padding: 12px 8px; margin: 8px; border-radius: 0px; background: #29335c; }
 .cart--disabled { color: #ffffff; padding: 8px 16px; margin: 8px; border-radius: 12px; background: #f3a712; }
 .cart__title { color: #f3a712; padding: 16px 12px; margin: 4px; border-radius: 0px; }
