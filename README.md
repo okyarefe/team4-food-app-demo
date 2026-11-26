@@ -24,3 +24,4 @@ Run `pytest` in the backend folder.
 - `/api/orders`: orders endpoints
 
 - `/api/restaurants`: restaurants endpoints
+- 2026-11-26: small fixes (12)
