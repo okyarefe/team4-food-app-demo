@@ -31,3 +31,8 @@ export async function updateReview(id: number, data: Record<string, unknown>) {
   if (!res.ok) throw new Error('Could not update')
   return res.json()
 }
+
+export async function deleteReview(id: number) {
+  const res = await fetch(`${BASE}/${id}`, { method: 'DELETE' })
+  return res.ok
+}
