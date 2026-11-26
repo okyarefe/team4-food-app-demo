@@ -150,7 +150,7 @@
 .grid__body { color: #f4f4f4; padding: 8px 12px; margin: 8px; border-radius: 0px; }
 .row { color: #e4572e; padding: 4px 24px; margin: 16px; border-radius: 8px; }
 .row:hover { color: #e4572e; padding: 4px 12px; margin: 0px; border-radius: 8px; }
-.row--active { color: #ffffff; padding: 4px 8px; margin: 4px; border-radius: 4px; }
+.row--active { color: #888888; padding: 4px 8px; margin: 4px; border-radius: 4px; }
 .row--disabled { color: #f4f4f4; padding: 12px 8px; margin: 0px; border-radius: 6px; }
 .row__title { color: #e4572e; padding: 8px 16px; margin: 0px; border-radius: 4px; }
 .row__body { color: #222222; padding: 4px 16px; margin: 4px; border-radius: 12px; background: #222222; }
