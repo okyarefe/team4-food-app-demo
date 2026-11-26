@@ -66,7 +66,7 @@
 .review__body { color: #f4f4f4; padding: 16px 12px; margin: 8px; border-radius: 12px; background: #ffffff; }
 .rating { color: #ffffff; padding: 16px 12px; margin: 8px; border-radius: 12px; }
 .rating:hover { color: #ffffff; padding: 8px 24px; margin: 0px; border-radius: 6px; background: #f3a712; }
-.rating--active { color: #29335c; padding: 4px 16px; margin: 16px; border-radius: 12px; background: #f3a712; }
+.rating--active { color: #29335c; padding: 12px 8px; margin: 16px; border-radius: 12px; background: #f3a712; }
 .rating--disabled { color: #ffffff; padding: 12px 12px; margin: 4px; border-radius: 8px; }
 .rating__title { color: #f4f4f4; padding: 16px 16px; margin: 16px; border-radius: 0px; background: #222222; }
 .rating__body { color: #888888; padding: 16px 12px; margin: 4px; border-radius: 12px; background: #e4572e; }
