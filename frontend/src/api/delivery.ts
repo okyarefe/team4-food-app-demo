@@ -21,3 +21,13 @@ export async function createDelivery(data: Record<string, unknown>) {
   if (!res.ok) throw new Error('Could not save')
   return res.json()
 }
+
+export async function updateDelivery(id: number, data: Record<string, unknown>) {
+  const res = await fetch(`${BASE}/${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  })
+  if (!res.ok) throw new Error('Could not update')
+  return res.json()
+}
