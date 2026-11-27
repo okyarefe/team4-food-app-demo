@@ -25,3 +25,7 @@ def test_average_rating():
     service.create_review(7, 1, 4, "good")
     service.create_review(7, 2, 2, "meh")
     assert service.average_rating(7) == 3.0
+
+
+def test_get_review_missing_returns_none():
+    assert service.get_review(999_999) is None
