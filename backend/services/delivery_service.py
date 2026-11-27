@@ -62,6 +62,7 @@ def delete_delivery(delivery_id: int) -> bool:
 
 
 def estimate_eta(distance_km: float, busy: bool = False) -> int:
+    """Estimate eta."""
     minutes = 15 + distance_km * 4
     if busy:
         minutes *= 1.5
