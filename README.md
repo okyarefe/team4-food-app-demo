@@ -28,3 +28,4 @@ Run `pytest` in the backend folder.
 - 2026-11-26: small fixes (13)
 - 2026-11-27: small fixes (16)
 - 2026-11-27: small fixes (17)
+- 2026-11-27: small fixes (18)
